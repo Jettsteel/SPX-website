@@ -1,5 +1,7 @@
 :root {
     --blue: #7289DA;
+    --blue-darker: #36457a;
+    --blue-darkerer: #242e53;
     --white: #FFFFFF;
     --gray: #99AAB5;
     --dark: #2C2F33;
@@ -20,9 +22,166 @@
     --frost-3: #81a1c1;
     --frost-4: #5e81ac;
 
-    --pink: #bf616a;
+    --pink: #be4450;
     --orange: #d08770;
     --yellow: #ebcb8b;
     --green: #a3be8c;
     --purple: #b48ead;
+
+    font-size: 70%;
+}
+/* background: linear-gradient(to top right, var(--frost-1), var(--blue)); */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    transition: all .3s;
+}
+
+html {
+    background: var(--dark);
+}
+
+.landing {
+    /* background-color: var(--darker); */
+    width: 80vw;
+    height: 95vh;
+
+    margin: 5vh auto 0;
+}
+
+.landing h1 {
+    color: var(--blue);
+    font-family: Poppins;
+    font-size: 8rem;
+    font-weight: 700;
+
+    cursor: default;
+}
+
+.landing p {
+    color: white;
+    font-family: Poppins;
+    font-size: 1.7rem;
+    cursor: default;
+}
+
+.landing p span {
+    color: var(--blue);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.landing p span + span {
+    color: var(--frost-3);
+}
+
+.landing p span:hover {
+    font-size: 1.8rem;
+}
+
+.logo-img {
+    display: flex;
+    justify-content: center;
+}
+
+.landing img {
+    width: 50vh;
+    margin-top: 2rem;
+    /* filter: invert(100%); */
+}
+
+.landing .learn-more {
+    position: absolute;
+    bottom: 2%;
+    left: 33vw;
+    width: 35vw;
+    text-align: center;
+    height: 4vh;
+    align-items: center;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+}
+
+.landing a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--gray);
+    font-family: 'Poppins';
+    animation: linear 3s infinite running fades;
+}
+
+@keyframes fades {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.links-block { height: 100vh; }
+
+.links-block, .links-container {
+    background-color: var(--polar-night-1);
+}
+
+.links-container {
+    width: 80vw;
+    margin: 0 auto;
+    /* margin-top: ; */
+    padding-top: 5vh;
+}
+
+.invite h1, .login h1 {
+    color: var(--blue);
+    font-family: Poppins;
+    font-size: 3rem;
+    font-weight: 700;
+
+    cursor: default;
+}
+
+.invite .link-button,
+.login .link-button {
+    text-decoration: none;
+    font-family: Roboto;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.link-parent {
+    width: 100%;
+    height: 6vh;
+    background: var(--blue);
+    border-radius: .4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link-parent:hover {
+    background: var(--blue);;
+}
+
+.invite p, .login p {
+    font-size: 1.8rem;
+    color: white;
+    font-family: Poppins;
+
+}
+.link-parent {
+    margin-top: 1vh;
+    /* margin: 1vh auto 0; */
+}
+
+.login {
+    margin-top: 9vh;
 }
